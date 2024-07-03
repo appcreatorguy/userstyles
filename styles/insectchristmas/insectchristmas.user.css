@@ -13,7 +13,7 @@
 
 @var color accent-color "Accent Color" #a6e3a1
 @var color background-color "Background Color" #1e1e2e
-@var text font-main "Main Font" "Berkeley Mono Variable"
+@var text font-main "Main Font" "VCR OSD Mono"
 @var checkbox crt "CRT Enabled" 1
 ==/UserStyle== */
 @-moz-document url-prefix("https://insect.christmas/forum"),
