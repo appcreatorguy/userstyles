@@ -1,0 +1,1411 @@
+/* ==UserStyle==
+@name           insect.christmas custom colors and font
+@namespace      alphacerium.dev
+@version        1.0.0
+@description    A userstyle to customize the colors and font used on the insect.christmas forums
+@author         alphacerium (https://alphacerium.dev)
+@homepageURL    https://github.com/appcreatorguy/userstyles
+@supportURL     https://github.com/appcreatorguy/userstyles/issues
+@updateURL      https://github.com/appcreatorguy/userstyles/raw/main/insectchristmas/insectchristmas.user.css
+@license        CC-BY-4.0
+
+@preprocessor less
+
+@var color accent-color "Accent Color" #a6e3a1
+@var color background-color "Background Color" #1e1e2e
+@var text font-main "Main Font" "Berkeley Mono Variable"
+@var checkbox crt "CRT Enabled" 1
+==/UserStyle== */
+@-moz-document url-prefix("https://insect.christmas/forum"),
+url-prefix("http://insect.christmas/forum")
+{
+  :root {
+    --accent-color: @accent-color;
+    --accent-color-darker: lighten(@accent-color, 20%);
+    --background-color: @background-color;
+    --font-main: @font-main;
+  }
+  /*
+--------------------------------------------------------------
+Colours and backgrounds for common.css
+-------------------------------------------------------------- */
+  html,
+  body {
+    color: var(--accent-color);
+    background-color: var(--background-color);
+  }
+
+  h1 {
+    color: var(--accent-color);
+  }
+
+  h2 {
+    color: var(--accent-color);
+  }
+
+  h3 {
+    border-bottom-color: var(--accent-color);
+    color: var(--accent-color);
+  }
+
+  hr {
+    border-color: var(--accent-color);
+    border-top-color: var(--accent-color);
+  }
+
+  /*
+--------------------------------------------------------------
+Colours and backgrounds for links.css
+-------------------------------------------------------------- */
+  a {
+    color: var(--accent-color-darker);
+  }
+  a:hover,
+  a:focus {
+    color: var(--accent-color);
+  }
+
+  /* Links on gradient backgrounds */
+  .forumbg .header a,
+  .forabg .header a,
+  th a {
+    color: var(--background-color);
+  }
+
+  .forumbg .header a:hover,
+  .forabg .header a:hover,
+  th a:hover {
+    color: var(--accent-color-darker);
+  }
+
+  /* Notification mark read link */
+  .dropdown-extended a.mark_read {
+    background-color: var(--accent-color-darker);
+    color: var(--background-color);
+  }
+
+  .dropdown-extended a.mark_read:hover {
+    background-color: var(--accent-color);
+  }
+
+  /* Post body links */
+  .postlink:hover {
+    color: var(--accent-color);
+  }
+
+  .signature a,
+  .signature a:hover {
+    background-color: transparent;
+  }
+
+  /* Back to top of page */
+  .top i {
+    color: #999999;
+  }
+
+  /* Arrow links  */
+  .arrow-left:hover,
+  .arrow-right:hover {
+    color: var(--accent-color);
+  }
+
+  /* Round cornered boxes and backgrounds
+---------------------------------------- */
+  .wrap {
+    background-color: var(--background-color);
+    border-color: transparent;
+    max-width: none;
+  }
+
+  .headerbar {
+    color: var(--background-color);
+  }
+
+  .headerbar {
+    background-color: var(--accent-color);
+  }
+
+  .forumbg,
+  .forabg {
+    background-color: var(--accent-color);
+  }
+
+  .navbar {
+    background-color: var(--background-color);
+  }
+
+  .panel {
+    background-color: var(--background-color);
+    color: var(--accent-color);
+  }
+
+  .post:target .content {
+    color: var(--accent-color-darker);
+  }
+
+  .post h3 a.first-unread,
+  .post:target h3 a {
+    color: var(--accent-color-darker);
+  }
+
+  .bg1 {
+    background-color: var(--background-color);
+  }
+
+  table.zebra-list tr:nth-child(odd) td,
+  ul.zebra-list li:nth-child(odd) {
+    background-color: var(--background-color);
+  }
+
+  .bg2 {
+    background-color: var(--background-color);
+  }
+
+  table.zebra-list tr:nth-child(even) td,
+  ul.zebra-list li:nth-child(even) {
+    background-color: var(--background-color);
+  }
+
+  .bg3 {
+    background-color: var(--background-color);
+  }
+
+  .ucprowbg {
+    background-color: #dcdee2;
+  }
+
+  .fieldsbg {
+    background-color: #e7e8ea;
+  }
+
+  /* Horizontal lists
+----------------------------------------*/
+  ul.navlinks {
+    border-top-color: var(--accent-color);
+  }
+
+  /* Table styles
+----------------------------------------*/
+  table.table1 thead th {
+    color: var(--background-color);
+  }
+
+  table.table1 tbody tr {
+    border-color: var(--accent-color);
+  }
+
+  table.table1 td {
+    color: var(--accent-color);
+  }
+
+  table.table1 tbody td {
+    border-top-color: var(--accent-color);
+  }
+
+  table.table1 tbody th {
+    border-bottom-color: var(--accent-color);
+    color: var(--accent-color);
+    background-color: var(--background-color);
+  }
+
+  table.info tbody th {
+    color: var(--background-color);
+  }
+
+  /* Misc layout styles
+---------------------------------------- */
+  dl.details dt {
+    color: var(--accent-color);
+  }
+
+  dl.details dd {
+    color: var(--accent-color);
+  }
+
+  .sep {
+    color: #1198d9;
+  }
+
+  /* Icon styles
+---------------------------------------- */
+  .icon.icon-blue,
+  a:hover .icon.icon-blue {
+    color: var(--accent-color);
+  }
+
+  .icon.icon-green,
+  a:hover .icon.icon-green {
+    color: var(--accent-color-darker);
+  }
+
+  .icon.icon-red,
+  a:hover .icon.icon-red {
+    color: var(--accent-color-darker);
+  }
+
+  .icon.icon-orange,
+  a:hover .icon.icon-orange {
+    color: var(--accent-color-darker);
+  }
+
+  .icon.icon-bluegray,
+  a:hover .icon.icon-bluegray {
+    color: var(--accent-color);
+  }
+
+  .icon.icon-gray,
+  a:hover .icon.icon-gray {
+    color: var(--accent-color);
+  }
+
+  .icon.icon-lightgray,
+  a:hover .icon.icon-lightgray {
+    color: var(--accent-color);
+  }
+
+  .icon.icon-black,
+  a:hover .icon.icon-black {
+    color: var(--background-color);
+  }
+
+  .alert_close .icon:before {
+    background-color: var(--accent-color-darker);
+    color: var(--background-color);
+    height: 20px;
+    width: 20px;
+  }
+
+  .alert_close .icon:hover:before {
+    background-color: var(--accent-color);
+  }
+
+  /* Jumpbox */
+  .jumpbox .dropdown li {
+    border-top-color: var(--accent-color);
+  }
+
+  .jumpbox-cat-link {
+    background-color: var(--accent-color);
+    border-top-color: var(--accent-color);
+    color: var(--background-color);
+  }
+
+  .jumpbox-cat-link:hover {
+    background-color: var(--accent-color);
+    border-top-color: var(--accent-color);
+    color: var(--accent-color-darker);
+  }
+
+  .jumpbox-forum-link {
+    background-color: var(--background-color);
+  }
+
+  .jumpbox-forum-link:hover {
+    color: var(--accent-color);
+  }
+
+  .jumpbox .dropdown .pointer-inner {
+    border-color: transparent transparent;
+  }
+
+  .jumpbox-sub-link {
+    background-color: var(--background-color);
+  }
+
+  .jumpbox-sub-link:hover {
+    color: var(--accent-color);
+  }
+
+  /* Miscellaneous styles
+---------------------------------------- */
+  .copyright {
+    color: var(--accent-color);
+  }
+
+  .error {
+    color: var(--background-color);
+    background: var(--accent-color-darker);
+  }
+
+  .reported {
+    background-color: var(--background-color);
+    box-shadow: 0 0 0px 3px var(--accent-color-darker) inset;
+  }
+
+  li.reported:hover {
+    background-color: var(--background-color) !important;
+  }
+
+  div.rules {
+    background-color: var(--accent-color);
+    color: var(--background-color);
+  }
+
+  p.post-notice {
+    background-color: var(--background-color);
+    background-image: none;
+    box-shadow: 0 0 0px 3px var(--accent-color-darker) inset;
+  }
+
+  /*
+--------------------------------------------------------------
+Colours and backgrounds for content.css
+-------------------------------------------------------------- */
+  ul.forums {
+    background-color: var(--background-color);
+  }
+
+  ul.topiclist li {
+    color: var(--accent-color);
+  }
+
+  ul.topiclist dd {
+    border-left-color: var(--accent-color);
+  }
+
+  .rtl ul.topiclist dd {
+    border-right-color: var(--accent-color);
+    border-left-color: transparent;
+  }
+
+  li.row {
+    border-top-color: var(--accent-color);
+    border-bottom-color: var(--accent-color);
+  }
+
+  li.header dt,
+  li.header dd {
+    color: var(--background-color);
+  }
+
+  /* Post body styles
+----------------------------------------*/
+  .postbody {
+    color: var(--accent-color);
+  }
+
+  /* Content container styles
+----------------------------------------*/
+  .content {
+    color: var(--accent-color);
+  }
+
+  .content h2,
+  .panel h2 {
+    color: var(--accent-color);
+    border-bottom-color: var(--accent-color);
+  }
+
+  dl.faq dt {
+    color: var(--accent-color);
+    text-decoration: underline;
+    margin-bottom: 5px;
+  }
+
+  .posthilit {
+    background-color: var(--accent-color-darker);
+    color: var(--background-color);
+  }
+
+  /* Post signature */
+  .signature {
+    border-top-color: var(--accent-color);
+  }
+
+  /* Post noticies */
+  .notice {
+    border-top-color: var(--accent-color);
+  }
+
+  /* BB Code styles
+----------------------------------------*/
+  /* Quote block */
+  blockquote {
+    background-color: var(--background-color);
+    border-color: var(--accent-color);
+  }
+
+  blockquote blockquote {
+    /* Nested quotes */
+    background-color: var(--background-color);
+  }
+
+  blockquote blockquote blockquote {
+    /* Nested quotes */
+    background-color: var(--background-color);
+  }
+
+  /* Code block */
+  .codebox {
+    background-color: var(--background-color);
+    border-color: var(--accent-color);
+  }
+
+  .codebox p {
+    border-bottom-color: var(--accent-color);
+  }
+
+  .codebox code {
+    color: var(--accent-color-darker);
+  }
+
+  /* Attachments
+----------------------------------------*/
+  .attachbox {
+    background-color: var(--background-color);
+    border-color: var(--accent-color);
+  }
+
+  .pm-message .attachbox {
+    background-color: var(--background-color);
+  }
+
+  .attachbox dd {
+    border-top-color: var(--accent-color);
+  }
+
+  .attachbox p {
+    color: var(--accent-color);
+  }
+
+  .attachbox p.stats {
+    color: var(--accent-color);
+  }
+
+  .attach-image img {
+    border-color: var(--accent-color);
+  }
+
+  /* Inline image thumbnails */
+  dl.file dd {
+    color: var(--accent-color);
+  }
+
+  dl.thumbnail img {
+    border-color: var(--accent-color);
+    background-color: var(--background-color);
+  }
+
+  dl.thumbnail dd {
+    color: var(--accent-color);
+  }
+
+  dl.thumbnail dt a:hover {
+    background-color: var(--accent-color);
+  }
+
+  dl.thumbnail dt a:hover img {
+    border-color: var(--accent-color-darker);
+  }
+
+  /* Post poll styles
+----------------------------------------*/
+  fieldset.polls dl {
+    border-top-color: var(--accent-color);
+    color: var(--accent-color);
+  }
+
+  fieldset.polls dl.voted {
+    color: var(--accent-color-darker);
+  }
+
+  fieldset.polls dd div {
+    color: var(--background-color);
+  }
+
+  .pollbar1,
+  .pollbar2,
+  .pollbar3,
+  .pollbar4 {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+  }
+
+  .pollbar5 {
+    background-color: var(--accent-color-darker);
+    border-color: var(--accent-color-darker);
+  }
+
+  /* Poster profile block
+----------------------------------------*/
+  .postprofile {
+    color: var(--accent-color);
+    border-color: var(--accent-color);
+  }
+
+  .pm .postprofile {
+    border-color: var(--accent-color);
+  }
+
+  .postprofile strong {
+    color: var(--accent-color);
+  }
+
+  dd.profile-warnings {
+    color: var(--accent-color-darker);
+  }
+
+  /*
+--------------------------------------------------------------
+Colours and backgrounds for buttons.css
+-------------------------------------------------------------- */
+  .button {
+    border-color: var(--accent-color-darker);
+    background-color: var(--accent-color-darker);
+    color: var(--background-color);
+  }
+
+  .button:hover {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+    color: var(--background-color);
+  }
+
+  .button:focus {
+    color: var(--accent-color-darker);
+  }
+
+  .button .icon,
+  .button-secondary {
+    color: var(--background-color);
+  }
+
+  .button-secondary:hover,
+  .button:hover .icon {
+    color: var(--background-color);
+  }
+
+  .button-secondary:focus,
+  .button:focus .icon {
+    color: var(--accent-color-darker);
+  }
+
+  .caret {
+    border-color: var(--background-color);
+  }
+
+  .contact-icons a {
+    border-color: var(--accent-color);
+  }
+  .contact-icons a:hover {
+    background-color: var(--accent-color);
+  }
+
+  /* Pagination
+---------------------------------------- */
+  .pagination li a {
+    background: var(--accent-color-darker);
+    border-color: var(--accent-color-darker);
+    color: var(--background-color);
+  }
+
+  .pagination li.ellipsis span {
+    background: transparent;
+    color: var(--accent-color);
+  }
+
+  .pagination li.active span {
+    background: var(--accent-color);
+    border-color: var(--accent-color);
+    color: var(--background-color);
+  }
+
+  .pagination li a:hover,
+  .pagination li a:hover .icon,
+  .pagination .dropdown-visible a.dropdown-trigger,
+  .nojs .pagination .dropdown-container:hover a.dropdown-trigger {
+    background: var(--accent-color);
+    border-color: var(--accent-color);
+    color: var(--background-color);
+  }
+
+  /* Search box
+--------------------------------------------- */
+  .search-box .inputbox,
+  .search-box .inputbox:hover,
+  .search-box .inputbox:focus {
+    border-color: var(--accent-color);
+    background-color: var(--background-color);
+    color: var(--accent-color-darker);
+  }
+
+  .search-results li:hover,
+  .search-results li.active {
+    background-color: var(--background-color);
+  }
+
+  /*
+--------------------------------------------------------------
+Colours and backgrounds for cp.css
+-------------------------------------------------------------- */
+  /* Main CP box
+----------------------------------------*/
+  .panel-container h3,
+  .panel-container hr,
+  .cp-menu hr {
+    border-color: var(--accent-color);
+  }
+
+  .panel-container .panel li.row {
+    border-bottom-color: var(--accent-color);
+    border-top-color: var(--accent-color);
+  }
+
+  ul.cplist {
+    border-top-color: var(--accent-color);
+  }
+
+  .panel-container .panel li.header dd,
+  .panel-container .panel li.header dt {
+    color: var(--accent-color);
+  }
+
+  .panel-container table.table1 thead th {
+    color: var(--accent-color);
+    border-bottom-color: var(--accent-color);
+  }
+
+  .cp-main .pm-message {
+    border-color: var(--accent-color);
+    background-color: var(--background-color);
+  }
+
+  /* CP tabbed menu
+----------------------------------------*/
+  .tabs .tab > a {
+    background: var(--accent-color-darker);
+    color: var(--background-color);
+  }
+
+  .tabs .tab > a:hover {
+    background: var(--accent-color);
+    color: var(--background-color);
+  }
+
+  .tabs .activetab > a,
+  .tabs .activetab > a:hover {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+    color: var(--background-color);
+  }
+
+  .tabs .activetab > a:hover {
+    color: var(--background-color);
+  }
+
+  /* Mini tabbed menu used in MCP
+----------------------------------------*/
+  .minitabs .tab > a {
+    background-color: var(--accent-color-darker);
+    color: var(--background-color);
+  }
+
+  .minitabs .tab > a:hover {
+    background-color: var(--accent-color);
+    color: var(--background-color);
+  }
+
+  .minitabs .activetab > a,
+  .minitabs .activetab > a:hover {
+    background-color: var(--accent-color);
+    color: var(--background-color);
+  }
+
+  /* Responsive tabs
+----------------------------------------*/
+  .responsive-tab .responsive-tab-link:before {
+    border-color: var(--background-color);
+    background: var(--accent-color-darker);
+  }
+
+  .responsive-tab .responsive-tab-link:hover:before {
+    background: var(--accent-color);
+  }
+
+  /* UCP navigation menu
+----------------------------------------*/
+  /* Link styles for the sub-section links */
+  .navigation a {
+    color: var(--background-color);
+    background: var(--accent-color-darker);
+  }
+
+  .navigation a:hover {
+    background: var(--accent-color);
+  }
+
+  .navigation .active-subsection a {
+    background: var(--accent-color);
+    color: var(--background-color);
+  }
+
+  /* Preferences pane layout
+----------------------------------------*/
+  .panel-container h2 {
+    color: var(--accent-color);
+  }
+
+  .panel-container .panel {
+    background-color: var(--background-color);
+  }
+
+  .cp-main .pm {
+    background-color: var(--background-color);
+  }
+
+  /* Friends list */
+  .cp-mini {
+    background-color: var(--background-color);
+    border-color: var(--accent-color);
+  }
+
+  dl.mini dt {
+    color: var(--accent-color);
+  }
+
+  /* PM Styles
+----------------------------------------*/
+  /* PM Message history */
+  .current {
+    color: var(--accent-color-darker) !important;
+  }
+
+  /* PM marking colours */
+  .pmlist li.pm_message_reported_colour,
+  .pm_message_reported_colour {
+    border-left-color: var(--accent-color-darker);
+    border-right-color: var(--accent-color-darker);
+  }
+
+  .pmlist li.pm_marked_colour,
+  .pm_marked_colour {
+    border-color: var(--accent-color-darker);
+  }
+
+  .pmlist li.pm_replied_colour,
+  .pm_replied_colour {
+    border-color: var(--accent-color);
+  }
+
+  .pmlist li.pm_friend_colour,
+  .pm_friend_colour {
+    border-color: var(--accent-color-darker);
+  }
+
+  .pmlist li.pm_foe_colour,
+  .pm_foe_colour {
+    border-color: var(--accent-color-darker);
+  }
+
+  /* Avatar gallery */
+  .gallery label {
+    background: var(--background-color);
+    border-color: var(--accent-color);
+  }
+
+  .gallery label:hover {
+    background-color: var(--accent-color-darker);
+  }
+
+  /*
+--------------------------------------------------------------
+Colours and backgrounds for forms.css
+-------------------------------------------------------------- */
+  /* General form styles
+----------------------------------------*/
+  select {
+    border-color: #666666;
+    background-color: #fafafa;
+    color: #000;
+  }
+
+  label {
+    color: var(--accent-color);
+  }
+
+  option.disabled-option {
+    color: graytext;
+  }
+
+  /* Definition list layout for forms
+---------------------------------------- */
+  dd label {
+    color: var(--accent-color);
+  }
+
+  fieldset.fields1 {
+    background-color: transparent;
+  }
+
+  /* Hover effects */
+  fieldset dl:hover dt label {
+    color: var(--accent-color-darker);
+  }
+
+  /* Quick-login on index page */
+  fieldset.quick-login input.inputbox {
+    background-color: var(--background-color);
+    border-color: var(--accent-color);
+  }
+
+  /* Posting page styles
+----------------------------------------*/
+  .message-box textarea {
+    color: var(--accent-color-darker);
+  }
+
+  .message-box textarea.drag-n-drop {
+    outline-color: var(--accent-color);
+  }
+
+  .message-box textarea.drag-n-drop-highlight {
+    outline-color: var(--accent-color-darker);
+  }
+
+  /* Input field styles
+---------------------------------------- */
+  .inputbox {
+    background-color: var(--background-color);
+    border-color: var(--accent-color);
+    color: var(--accent-color-darker);
+  }
+
+  .inputbox:-moz-placeholder {
+    color: var(--accent-color);
+  }
+
+  .inputbox::-webkit-input-placeholder {
+    color: var(--accent-color);
+  }
+
+  .inputbox:hover,
+  .inputbox:focus {
+    border-color: var(--accent-color-darker);
+  }
+
+  .inputbox:focus:-moz-placeholder {
+    color: transparent;
+  }
+
+  .inputbox:focus::-webkit-input-placeholder {
+    color: transparent;
+  }
+
+  /* Form button styles
+---------------------------------------- */
+  a.button1,
+  input.button1,
+  input.button3,
+  a.button2,
+  input.button2 {
+    color: var(--background-color);
+    background-color: var(--accent-color-darker);
+  }
+
+  a.button1,
+  input.button1 {
+    border-color: var(--accent-color-darker);
+  }
+
+  /* Alternative button */
+  a.button2,
+  input.button2,
+  input.button3 {
+    border-color: var(--accent-color-darker);
+  }
+
+  /* <a> button in the style of the form buttons */
+  a.button1,
+  a.button2 {
+    color: var(--background-color);
+  }
+
+  /* Hover states */
+  a.button1:hover,
+  input.button1:hover,
+  a.button2:hover,
+  input.button2:hover,
+  input.button3:hover {
+    border-color: var(--accent-color);
+    color: var(--background-color);
+    background-color: var(--accent-color);
+  }
+
+  /* Focus states */
+  input.button1:focus,
+  input.button2:focus,
+  input.button3:focus {
+    border-color: var(--accent-color);
+    color: var(--background-color);
+  }
+
+  input.disabled {
+    color: #666666;
+  }
+
+  /* jQuery popups
+---------------------------------------- */
+  .phpbb_alert {
+    background-color: var(--background-color);
+    border-color: var(--accent-color);
+  }
+  .darken {
+    background-color: var(--background-color);
+  }
+
+  .dropdown-extended ul li {
+    border-top-color: var(--accent-color);
+  }
+
+  .dropdown-extended .header,
+  .dropdown-extended .footer {
+    border-color: var(--accent-color);
+    color: var(--accent-color);
+  }
+
+  .dropdown-extended .header {
+    background-color: var(--background-color);
+  }
+
+  .dropdown .pointer {
+    border-color: transparent transparent;
+  }
+
+  .dropdown .pointer-inner {
+    border-color: transparent transparent;
+  }
+
+  .dropdown-extended .pointer-inner {
+    border-color: transparent transparent;
+  }
+
+  .dropdown .dropdown-contents {
+    background: var(--background-color);
+    border-color: var(--accent-color);
+  }
+
+  .dropdown li,
+  .dropdown li li {
+    border-color: var(--accent-color);
+  }
+
+  .dropdown li.separator {
+    border-color: var(--accent-color);
+  }
+
+  /* Notifications
+---------------------------------------- */
+  .notification_list p.notification-time {
+    color: var(--accent-color);
+  }
+
+  li.notification-reported strong,
+  li.notification-disapproved strong {
+    color: var(--accent-color-darker);
+  }
+
+  .badge {
+    background-color: var(--accent-color-darker);
+    color: var(--background-color);
+  }
+
+  /* scroll bars */
+  /* Firefox */
+  * {
+    scrollbar-width: auto;
+    scrollbar-color: var(--accent-color-darker) var(--background-color);
+  }
+
+  /* Chrome, Edge, Safari */
+  *::-webkit-scrollbar-track {
+    background: var(--background-color);
+    border: 1px solid var(--accent-color-darker);
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: var(--accent-color-darker);
+  }
+
+  /* remove browser auto fill colours */
+  /* Chrome */
+  input:-webkit-autofill {
+    -webkit-text-fill-color: var(--accent-color-darker);
+    -webkit-box-shadow: 0 0 0px 1000px var(--background-color) inset;
+  }
+
+  input:-webkit-autofill::first-line {
+    font-size: 20px;
+    font-family: var(--font-main);
+  }
+
+  /* style inputs */
+  input[type="checkbox"],
+  input[type="radio"] {
+    border: 1px solid var(--accent-color);
+  }
+  input[type="checkbox"]:checked::before,
+  input[type="radio"]:checked::before {
+    color: var(--accent-color-darker);
+  }
+
+  ::-webkit-file-upload-button {
+    color: var(--background-color);
+    background: var(--accent-color-darker);
+    border: 1px solid var(--accent-color-darker);
+    font-family: var(--font-main);
+    margin-right: 10px;
+  }
+
+  ::file-selector-button {
+    color: var(--background-color);
+    background: var(--accent-color-darker);
+    border: 1px solid var(--accent-color-darker);
+    font-family: var(--font-main);
+    margin-right: 10px;
+  }
+
+  /**/
+  select,
+  input {
+    color: var(--accent-color-darker);
+    background: var(--background-color);
+    border: 1px solid var(--accent-color);
+  }
+
+  .site-description a:hover {
+    color: var(--accent-color-darker);
+    text-decoration: none;
+  }
+
+  .search-header .button {
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0px 1px var(--background-color) inset;
+  }
+
+  .search-header .button:hover {
+    background: var(--accent-color);
+  }
+
+  .button-search-end {
+    border-left: 1px solid var(--background-color);
+  }
+
+  a:hover > .badge {
+    background: var(--accent-color);
+  }
+
+  .nav-breadcrumbs {
+    background: var(--accent-color);
+    color: var(--background-color);
+  }
+
+  .nav-breadcrumbs a {
+    color: var(--background-color);
+  }
+
+  .nav-breadcrumbs a:hover {
+    color: var(--accent-color-darker);
+  }
+
+  .rules a {
+    color: var(--accent-color-darker);
+  }
+
+  .rules a:hover {
+    text-decoration: underline;
+    color: var(--accent-color-darker);
+  }
+
+  .post {
+    border: 2px solid var(--accent-color);
+  }
+
+  .panel {
+    border: 2px solid var(--accent-color);
+    margin-bottom: 10px;
+  }
+  .nav-footer {
+    background: var(--accent-color);
+    color: var(--background-color);
+  }
+
+  .nav-footer a {
+    color: var(--background-color);
+  }
+
+  .nav-footer a:hover {
+    color: var(--accent-color-darker);
+  }
+
+  .crt::before when (@crt =1) {
+    content: " ";
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.2) 50%),
+      linear-gradient(
+        90deg,
+        rgba(255, 0, 0, 0.06),
+        rgba(0, 255, 0, 0.02),
+        rgba(0, 0, 255, 0.06)
+      );
+    z-index: 2;
+    background-size:
+      100% 3px,
+      3px 100%;
+    pointer-events: none;
+  }
+
+  .crt::before when (@crt =0) {
+    display: none;
+  }
+
+  /* \2005 = small space, \00a0 = full space */
+  .search-box .fa-search::before {
+    content: ">";
+    font-family: var(--font-main);
+  }
+  .fa-cog::before {
+    content: "*";
+    font-family: var(--font-main);
+  }
+
+  .navbar .fa-bars::before {
+    content: "\2005\2261\2005";
+    font-family: var(--font-main);
+  }
+  .navbar .fa-question-circle::before {
+    content: "\2005?\2005";
+    font-family: var(--font-main);
+  }
+  .fa-pencil-square-o::before {
+    content: "+\2005";
+    font-family: var(--font-main);
+  }
+  .fa-power-off::before {
+    content: ">\2005";
+    font-family: var(--font-main);
+  }
+
+  .navbar .fa-cogs::before {
+    content: "\2005*\2005";
+    font-family: var(--font-main);
+  }
+  .navbar .fa-gavel::before {
+    content: "\2005\00a1\2005";
+    font-family: var(--font-main);
+  }
+  .navbar .fa-bell::before {
+    content: "\2005!\2005";
+    font-family: var(--font-main);
+  }
+  .navbar .fa-inbox::before {
+    content: "\2005\@\2005";
+    font-family: var(--font-main);
+  }
+  .navbar .fa-home::before {
+    content: "\2005\2261\2005";
+    font-family: var(--font-main);
+  }
+  .navbar .fa-search::before {
+    content: "?";
+    font-family: var(--font-main);
+  }
+  .mark_read .fa-check-circle::before {
+    content: "x";
+    font-family: var(--font-main);
+  }
+  .navbar .fa-envelope::before {
+    content: "\2005\0022\2005";
+    font-family: var(--font-main);
+  }
+  .navbar .fa-shield::before {
+    content: "\2005\03b1\2005";
+    font-family: var(--font-main);
+  }
+  .navbar .fa-group::before {
+    content: "\2005\2248\2005";
+    font-family: var(--font-main);
+  }
+  .navbar .fa-trash::before {
+    content: "\2005x\2005";
+    font-family: var(--font-main);
+  }
+  .navbar .fa-square-o::before {
+    content: "X\2005";
+    font-family: var(--font-main);
+  }
+  .navbar .fa-check-square-o::before {
+    content: "\221a\2005";
+    font-family: var(--font-main);
+  }
+
+  .subforum.unread .fa-file-o::before,
+  .subforum.read .fa-file-o::before {
+    content: ">\00a0";
+    font-family: var(--font-main);
+  }
+  .fa-external-link::before {
+    content: "\25a0\00a0";
+    font-family: var(--font-main);
+  }
+  .fa-external-link-square::before {
+    content: ">";
+    font-family: var(--font-main);
+  }
+
+  .fa-chevron-circle-up::before {
+    content: "^";
+    font-family: var(--font-main);
+  }
+  .fa-chevron-right::before {
+    content: ">";
+    font-family: var(--font-main);
+  }
+  .fa-chevron-left::before {
+    content: "<";
+    font-family: var(--font-main);
+  }
+  .pagination .fa-clone::before {
+    content: "";
+    font-family: var(--font-main);
+  }
+
+  .fa-file::before {
+    content: "*";
+    font-family: var(--font-main);
+  }
+  .fa-paperclip::before {
+    content: "+";
+    font-family: var(--font-main);
+  }
+  .fa-bar-chart::before {
+    content: "%";
+    font-family: var(--font-main);
+  }
+  .fa-exclamation::before {
+    content: "!";
+    font-family: var(--font-main);
+  }
+
+  .fa-pencil::before {
+    content: "+";
+    font-family: var(--font-main);
+  }
+  .fa-reply::before {
+    content: "+";
+    font-family: var(--font-main);
+  }
+  .fa-times::before {
+    content: "X";
+    font-family: var(--font-main);
+  }
+  .fa-mail-forward::before {
+    content: "\2192";
+    font-family: var(--font-main);
+  }
+  .fa-info::before {
+    content: "?";
+    font-family: var(--font-main);
+  }
+  .fa-quote-left::before,
+  .fa-quote-right::before {
+    content: '"';
+    font-family: var(--font-main);
+  }
+  .fa-exclamation-triangle::before {
+    content: "!!";
+    font-family: var(--font-main);
+  }
+
+  .fa-bold::before {
+    content: "B";
+    font-family: var(--font-main);
+  }
+  .fa-italic::before {
+    content: "I";
+    font-style: italic;
+    font-family: var(--font-main);
+  }
+  .fa-underline::before {
+    content: "U";
+    text-decoration: underline;
+    font-family: var(--font-main);
+  }
+  .fa-code::before {
+    content: "<>";
+    font-family: var(--font-main);
+  }
+  .fa-list::before {
+    content: "\2261";
+    font-family: var(--font-main);
+  }
+  .fa-list-ol::before {
+    content: "1\2261";
+    font-family: var(--font-main);
+  }
+  .fa-asterisk::before {
+    content: "*";
+    font-family: var(--font-main);
+  }
+  .fa-image::before {
+    content: "img";
+    font-family: var(--font-main);
+  }
+  .fa-link::before {
+    content: "\221e";
+    font-family: var(--font-main);
+  }
+  .fa-flash::before {
+    content: "f";
+    font-family: var(--font-main);
+  }
+  .fa-tint::before {
+    content: "#";
+    font-family: var(--font-main);
+  }
+
+  .fa-wrench::before {
+    content: "?";
+    font-family: var(--font-main);
+  }
+  .fa-sort-amount-asc::before {
+    content: "\2261";
+    font-family: var(--font-main);
+  }
+  .fa-sort-down::before {
+    content: "\00a0v";
+    font-family: var(--font-main);
+  }
+  .fa-gavel::before {
+    content: "\00a1";
+    font-family: var(--font-main);
+  }
+
+  .fa-commenting-o::before {
+    content: "@";
+    font-family: var(--font-main);
+  }
+  blockquote cite::before,
+  .uncited::before {
+    content: '"..."';
+    font-family: var(--font-main);
+  }
+
+  .jumpbox-return .fa-angle-left::before {
+    content: "";
+    font-family: var(--font-main);
+  }
+
+  .fa-times-circle::before {
+    content: "X";
+    font-family: var(--font-main);
+  }
+
+  body {
+    font-family: var(--font-main), Verdana, Helvetica, Arial, sans-serif;
+  }
+}
